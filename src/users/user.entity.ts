@@ -5,9 +5,17 @@ export class User {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({type: 'varchar', length:30})
     name: string;
 
-    @Column()
+    @Column({type: 'varchar', length:30})
     email: string;
+
+    // @Column({ type: 'enum', enum: ['m', 'f', 'u'] })
+    // /**
+    //  * m - male
+    //  * f - female
+    //  * u - unspecified
+    //  */
+    // gender: string;
 }
